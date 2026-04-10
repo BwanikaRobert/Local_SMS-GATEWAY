@@ -1,0 +1,1082 @@
+[
+  {
+    "sn": 1,
+    "name": "SSERUNJOGI FRANK",
+    "school": "SOM",
+    "phone": "256707901583",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:38:04.757Z"
+  },
+  {
+    "sn": 2,
+    "name": "SSERUNJOGI FRANK",
+    "school": "SOM",
+    "phone": "256707901583",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:38:09.814Z"
+  },
+  {
+    "sn": 1,
+    "name": "LUBEGA JOEL COLLINS",
+    "school": "SHS",
+    "phone": "256757323816",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:41:37.046Z"
+  },
+  {
+    "sn": 4,
+    "name": "KABUYE JOHN JOASH",
+    "school": "SHS",
+    "phone": "256704646546",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:41:42.152Z"
+  },
+  {
+    "sn": 5,
+    "name": "NAKAVUZA GERTRUDE NOELA",
+    "school": "SHS",
+    "phone": "256708770594",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:41:47.245Z"
+  },
+  {
+    "sn": 6,
+    "name": "AHOMUGISHA JAVIRAH",
+    "school": "SOM",
+    "phone": "256708201013",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:41:52.323Z"
+  },
+  {
+    "sn": 7,
+    "name": "LUBEGA KASSIM",
+    "school": "SOM",
+    "phone": "256751155495",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:41:57.410Z"
+  },
+  {
+    "sn": 8,
+    "name": "ELUNGAT JAMES",
+    "school": "SOM",
+    "phone": "256753788716",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:42:02.954Z"
+  },
+  {
+    "sn": 10,
+    "name": "AHUMUZA BRONIA",
+    "school": "SOM",
+    "phone": "256743436447",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:42:08.074Z"
+  },
+  {
+    "sn": 12,
+    "name": "OJULA EMMANUEL",
+    "school": "DENTAL",
+    "phone": "256758326296",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:42:13.160Z"
+  },
+  {
+    "sn": 13,
+    "name": "NASSALI AGNES",
+    "school": "DENTAL",
+    "phone": "256756313120",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:42:18.238Z"
+  },
+  {
+    "sn": 20,
+    "name": "NANDAWULA ALICE",
+    "school": "BSB",
+    "phone": "256740749074",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:42:23.388Z"
+  },
+  {
+    "sn": 21,
+    "name": "SSEMIRIMU JOSEPH",
+    "school": "BSB",
+    "phone": "256708211962",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:42:28.487Z"
+  },
+  {
+    "sn": 23,
+    "name": "OMAGOR CHARLES",
+    "school": "SPH",
+    "phone": "256758441383",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:42:33.601Z"
+  },
+  {
+    "sn": 24,
+    "name": "KITAKA HUDSON",
+    "school": "SPH",
+    "phone": "256707130048",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:42:38.728Z"
+  },
+  {
+    "sn": 25,
+    "name": "NAKASI BERNA",
+    "school": "SPH",
+    "phone": "256746677533",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:42:43.782Z"
+  },
+  {
+    "sn": 27,
+    "name": "ARINDA PEARL",
+    "school": "SOL",
+    "phone": "256741268274",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:42:48.875Z"
+  },
+  {
+    "sn": 28,
+    "name": "KAYONDO SAMWIRI",
+    "school": "SOL",
+    "phone": "256709599771",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:42:53.980Z"
+  },
+  {
+    "sn": 29,
+    "name": "RUYANGE MATTHEW",
+    "school": "SOL",
+    "phone": "256709369169",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:42:59.039Z"
+  },
+  {
+    "sn": 34,
+    "name": "AFIAN NAGASHA",
+    "school": "SPS",
+    "phone": "256750197941",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:43:04.115Z"
+  },
+  {
+    "sn": 35,
+    "name": "AMPAIRE NAMANYA NIMUSIIMA",
+    "school": "SPS",
+    "phone": "256758650216",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:43:09.191Z"
+  },
+  {
+    "sn": 40,
+    "name": "TWINOMUJONI HANNING",
+    "school": "BIO",
+    "phone": "256750880092",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:43:14.270Z"
+  },
+  {
+    "sn": 41,
+    "name": "NANDIMBE FAITH RONAH",
+    "school": "BIO",
+    "phone": "256758835075",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:43:19.331Z"
+  },
+  {
+    "sn": 43,
+    "name": "NABISUBI ROY OLIVIA",
+    "school": "SOE",
+    "phone": "256700242275",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:43:24.386Z"
+  },
+  {
+    "sn": 44,
+    "name": "NALWOGGA JOVIA",
+    "school": "SOE",
+    "phone": "256702804945",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:43:29.437Z"
+  },
+  {
+    "sn": 45,
+    "name": "OWOR SILVER",
+    "school": "SOE",
+    "phone": "256703412169",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:43:34.493Z"
+  },
+  {
+    "sn": 47,
+    "name": "BATAMULIZA REDEMPTOR LILLIAN",
+    "school": "SDLS",
+    "phone": "256757442893",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:43:39.574Z"
+  },
+  {
+    "sn": 50,
+    "name": "MUTUNZI SIMON RAYMOND",
+    "school": "SDLS",
+    "phone": "256702166323",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:43:44.687Z"
+  },
+  {
+    "sn": 51,
+    "name": "ONORIA JOSEPH MICHAEL",
+    "school": "SDLS",
+    "phone": "256759479305",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:43:49.787Z"
+  },
+  {
+    "sn": 53,
+    "name": "AYIKORU LAIURE",
+    "school": "EASLIS",
+    "phone": "256746494967",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:43:54.863Z"
+  },
+  {
+    "sn": 54,
+    "name": "NIYONSHUTI RODRIC",
+    "school": "EASLIS",
+    "phone": "256741216605",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:44:00.047Z"
+  },
+  {
+    "sn": 55,
+    "name": "JAKUMA PIUS",
+    "school": "EASLIS",
+    "phone": "256740582023",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:44:05.168Z"
+  },
+  {
+    "sn": 58,
+    "name": "TAMALE VALERIAN",
+    "school": "SCIT",
+    "phone": "256744397362",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:44:10.253Z"
+  },
+  {
+    "sn": 59,
+    "name": "MUWONGE NICHOLAS",
+    "school": "SCIT",
+    "phone": "256707611985",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:44:15.325Z"
+  },
+  {
+    "sn": 61,
+    "name": "AKANKUNDA ANITAH",
+    "school": "SOE",
+    "phone": "256756649271",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:44:20.402Z"
+  },
+  {
+    "sn": 63,
+    "name": "MUBIRU DAVIS PAUL",
+    "school": "SOE",
+    "phone": "256757809596",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:44:25.491Z"
+  },
+  {
+    "sn": 64,
+    "name": "SHILLING GILLES",
+    "school": "SOE",
+    "phone": "256748598738",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:44:30.542Z"
+  },
+  {
+    "sn": 65,
+    "name": "NAGAWA FAVOR TEDDY",
+    "school": "SOE",
+    "phone": "256743039006",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:44:35.623Z"
+  },
+  {
+    "sn": 67,
+    "name": "KEKITINISA BLESSING",
+    "school": "SOB",
+    "phone": "256754661129",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:44:40.719Z"
+  },
+  {
+    "sn": 69,
+    "name": "AINAMAANI DAVID",
+    "school": "SOB",
+    "phone": "256706784452",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:44:45.811Z"
+  },
+  {
+    "sn": 70,
+    "name": "EKYOKUSIIMA ELIZABETH",
+    "school": "SOB",
+    "phone": "256744645858",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:44:50.882Z"
+  },
+  {
+    "sn": 72,
+    "name": "NAHWERA EDWARD",
+    "school": "SOB",
+    "phone": "256740835117",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:44:55.967Z"
+  },
+  {
+    "sn": 73,
+    "name": "KATEREGGA MICHAEL MAYANJA",
+    "school": "SSP",
+    "phone": "256730815205",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:45:01.053Z"
+  },
+  {
+    "sn": 74,
+    "name": "MUYOMBA MICHAEL",
+    "school": "SSP",
+    "phone": "256706284584",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:45:06.327Z"
+  },
+  {
+    "sn": 77,
+    "name": "AWOR REBECCA",
+    "school": "SVAR",
+    "phone": "256748817198",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:45:11.430Z"
+  },
+  {
+    "sn": 79,
+    "name": "MAANGIE GRANT",
+    "school": "SVAR",
+    "phone": "256736715808",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:45:17.000Z"
+  },
+  {
+    "sn": 81,
+    "name": "NABADDA LILIAN",
+    "school": "SVAR",
+    "phone": "256751154526",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:45:22.117Z"
+  },
+  {
+    "sn": 82,
+    "name": "NAKIBIRANOO TRACY",
+    "school": "SHLS",
+    "phone": "256700777445",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:45:27.197Z"
+  },
+  {
+    "sn": 83,
+    "name": "MUHUMUZA BENON",
+    "school": "SHLS",
+    "phone": "256744069359",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:45:32.344Z"
+  },
+  {
+    "sn": 84,
+    "name": "OPIO ROGERS",
+    "school": "SHLS",
+    "phone": "256705162308",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:45:37.445Z"
+  },
+  {
+    "sn": 86,
+    "name": "NAMAGEMBE SUZAN",
+    "school": "SHLS",
+    "phone": "256754128465",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:45:42.506Z"
+  },
+  {
+    "sn": 89,
+    "name": "ATUKWATSE DICKENS",
+    "school": "SBE",
+    "phone": "256701704945",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:45:47.570Z"
+  },
+  {
+    "sn": 91,
+    "name": "IOWKUHANGI CHRISTIANA",
+    "school": "SBE",
+    "phone": "256708968856",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:45:52.666Z"
+  },
+  {
+    "sn": 92,
+    "name": "BARAGAIRE DORCAH",
+    "school": "SOE",
+    "phone": "256757229613",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:45:57.756Z"
+  },
+  {
+    "sn": 100,
+    "name": "OMITA AMOS",
+    "school": "MTSIFA",
+    "phone": "256758473614",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:46:02.910Z"
+  },
+  {
+    "sn": 101,
+    "name": "WESONGA WINNER DEBORAH",
+    "school": "MTSIFA",
+    "phone": "256700781722",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:46:07.986Z"
+  },
+  {
+    "sn": 103,
+    "name": "SSEKASAMBA REAGAN",
+    "school": "SFTNB",
+    "phone": "256759002286",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:46:13.145Z"
+  },
+  {
+    "sn": 104,
+    "name": "NABAASA SYLVIA",
+    "school": "SFTNB",
+    "phone": "256759013382",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:46:18.270Z"
+  },
+  {
+    "sn": 106,
+    "name": "SSENDAGIRE ENOCK",
+    "school": "SFTNB",
+    "phone": "256701958295",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:46:23.388Z"
+  },
+  {
+    "sn": 107,
+    "name": "SSENGENDO BRIGHTON",
+    "school": "SFTNB",
+    "phone": "256756542764",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:46:28.517Z"
+  },
+  {
+    "sn": 111,
+    "name": "MUWAYA ENOCK SAMUEL",
+    "school": "SAS",
+    "phone": "256702088408",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:46:33.628Z"
+  },
+  {
+    "sn": 113,
+    "name": "ARIMPA AGATHA",
+    "school": "SFEGS",
+    "phone": "256754814620",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:46:38.731Z"
+  },
+  {
+    "sn": 117,
+    "name": "KAZIBA TIMOTHY",
+    "school": "SFEGS",
+    "phone": "256752369586",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:46:43.798Z"
+  },
+  {
+    "sn": 118,
+    "name": "ASIIMWE RITAH",
+    "school": "SLLC",
+    "phone": "256750082623",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:46:48.855Z"
+  },
+  {
+    "sn": 119,
+    "name": "NAMULONDO LAYIRAH",
+    "school": "SLLC",
+    "phone": "256705443289",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:46:54.027Z"
+  },
+  {
+    "sn": 120,
+    "name": "BORN FRANK",
+    "school": "SLLC",
+    "phone": "256706005808",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:46:59.123Z"
+  },
+  {
+    "sn": 123,
+    "name": "MATEKA AARON",
+    "school": "SLPA",
+    "phone": "256701326241",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:47:04.276Z"
+  },
+  {
+    "sn": 127,
+    "name": "KAVUMA ARAFAT YUSUF",
+    "school": "SLPA",
+    "phone": "256753353244",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:47:09.380Z"
+  },
+  {
+    "sn": 130,
+    "name": "KABUUSI WILLIAM",
+    "school": "SOP",
+    "phone": "256700760442",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:47:14.505Z"
+  },
+  {
+    "sn": 132,
+    "name": "WABWIRE JUMA ARSHAVIN",
+    "school": "SOP",
+    "phone": "256759600047",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:47:19.590Z"
+  },
+  {
+    "sn": 134,
+    "name": "NASSANGA SARAH",
+    "school": "SOSS",
+    "phone": "256709116086",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:47:24.711Z"
+  },
+  {
+    "sn": 135,
+    "name": "ATUKUNDA SHIBAH",
+    "school": "SOSS",
+    "phone": "256744130058",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:47:29.818Z"
+  },
+  {
+    "sn": 136,
+    "name": "BARAJI SOLOMON MANDELA",
+    "school": "SOSS",
+    "phone": "256752813704",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:47:34.979Z"
+  },
+  {
+    "sn": 137,
+    "name": "RUSOKE IVAN",
+    "school": "SOSS",
+    "phone": "256744352234",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:47:40.079Z"
+  },
+  {
+    "sn": 139,
+    "name": "NAMPEERA JENIFER",
+    "school": "GENDER",
+    "phone": "256742024341",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:47:45.209Z"
+  },
+  {
+    "sn": 141,
+    "name": "NATUMANYA MARIA LYNETTE",
+    "school": "GENDER",
+    "phone": "256752591653",
+    "carrier": "airtel",
+    "sentAt": "2026-04-10T09:47:50.258Z"
+  },
+  {
+    "sn": 2,
+    "name": "DENG MAJOK DENG",
+    "school": "SHS",
+    "phone": "256777206745",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T09:58:33.556Z"
+  },
+  {
+    "sn": 3,
+    "name": "MUSINGUZI PETER SIMON",
+    "school": "SHS",
+    "phone": "256778103580",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T09:58:38.736Z"
+  },
+  {
+    "sn": 11,
+    "name": "MONDO DANIEL",
+    "school": "DENTAL",
+    "phone": "256766550105",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T09:58:43.826Z"
+  },
+  {
+    "sn": 14,
+    "name": "MUSENE SHAKIRAH NABWEYE",
+    "school": "DENTAL",
+    "phone": "256776611950",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T09:58:48.937Z"
+  },
+  {
+    "sn": 15,
+    "name": "MUNGUDIT MOSES",
+    "school": "DENTAL",
+    "phone": "256769371181",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T09:58:54.161Z"
+  },
+  {
+    "sn": 16,
+    "name": "ALONG NEHEMIAH OTIM",
+    "school": "BSB",
+    "phone": "256770905830",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T09:58:59.216Z"
+  },
+  {
+    "sn": 17,
+    "name": "OGIRE JOHN BAPTIST",
+    "school": "BSB",
+    "phone": "256778479761",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T09:59:04.344Z"
+  },
+  {
+    "sn": 18,
+    "name": "SSEKITOLEKO SHAFIC",
+    "school": "BSB",
+    "phone": "256760490700",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T09:59:09.403Z"
+  },
+  {
+    "sn": 19,
+    "name": "ASIIMWE ANITA",
+    "school": "BSB",
+    "phone": "256773358871",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T09:59:14.473Z"
+  },
+  {
+    "sn": 22,
+    "name": "ALIGO GODFREY",
+    "school": "SPH",
+    "phone": "256780250568",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T09:59:19.540Z"
+  },
+  {
+    "sn": 26,
+    "name": "SSENABULYA MUNIRUH",
+    "school": "SPH",
+    "phone": "256789948687",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T09:59:24.784Z"
+  },
+  {
+    "sn": 30,
+    "name": "BUTEME DORCUS",
+    "school": "SOL",
+    "phone": "256760514025",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T09:59:29.926Z"
+  },
+  {
+    "sn": 31,
+    "name": "MUTESI PATRICIA ANGEL",
+    "school": "SOL",
+    "phone": "256787014125",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T09:59:35.076Z"
+  },
+  {
+    "sn": 32,
+    "name": "JULIET KISAKYE",
+    "school": "SPS",
+    "phone": "256771059368",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T09:59:40.315Z"
+  },
+  {
+    "sn": 33,
+    "name": "RAKARA ANDREW",
+    "school": "SPS",
+    "phone": "256770763777",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T09:59:45.369Z"
+  },
+  {
+    "sn": 36,
+    "name": "MANGENI NATHAN",
+    "school": "BIO",
+    "phone": "256791501700",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T09:59:50.529Z"
+  },
+  {
+    "sn": 37,
+    "name": "AJUKA TRUST",
+    "school": "BIO",
+    "phone": "256772103831",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T09:59:55.587Z"
+  },
+  {
+    "sn": 38,
+    "name": "ABAASA DANIEL",
+    "school": "BIO",
+    "phone": "256781098111",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:00:00.766Z"
+  },
+  {
+    "sn": 39,
+    "name": "ATWONGYERE ROBINSON",
+    "school": "BIO",
+    "phone": "256767370398",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:00:05.866Z"
+  },
+  {
+    "sn": 42,
+    "name": "KUSASIRA LIVINGSTONE",
+    "school": "SOE",
+    "phone": "256772115973",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:00:10.925Z"
+  },
+  {
+    "sn": 48,
+    "name": "MIREMBE MARIA",
+    "school": "SDLS",
+    "phone": "256767323376",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:00:16.130Z"
+  },
+  {
+    "sn": 49,
+    "name": "BWANIKA FREDRICK",
+    "school": "SDLS",
+    "phone": "256760043488",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:00:21.244Z"
+  },
+  {
+    "sn": 57,
+    "name": "MUTESASIRA TENDO SHAMMAH",
+    "school": "SCIT",
+    "phone": "256791199978",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:00:26.334Z"
+  },
+  {
+    "sn": 60,
+    "name": "AMABE JUNIOR HUMPHREY",
+    "school": "SCIT",
+    "phone": "256780566352",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:00:31.492Z"
+  },
+  {
+    "sn": 62,
+    "name": "KAYESU DEBORAH",
+    "school": "SOE",
+    "phone": "256787051515",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:00:36.701Z"
+  },
+  {
+    "sn": 66,
+    "name": "MUKALAZI MUSA",
+    "school": "SOE",
+    "phone": "256768658481",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:00:41.819Z"
+  },
+  {
+    "sn": 68,
+    "name": "ARINDA LEONARD CLAVER",
+    "school": "SOB",
+    "phone": "256768631405",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:00:46.940Z"
+  },
+  {
+    "sn": 71,
+    "name": "ATWEBEMBEIRE PATIENCE",
+    "school": "SOB",
+    "phone": "256780905290",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:00:52.036Z"
+  },
+  {
+    "sn": 75,
+    "name": "NAKACIWA JOCELYN",
+    "school": "SSP",
+    "phone": "256774817198",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:00:57.169Z"
+  },
+  {
+    "sn": 80,
+    "name": "AYOTO GLORIA MERCY",
+    "school": "SVAR",
+    "phone": "256763974824",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:01:02.310Z"
+  },
+  {
+    "sn": 85,
+    "name": "LUKWAGO JONAH",
+    "school": "SHLS",
+    "phone": "256786581288",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:01:07.403Z"
+  },
+  {
+    "sn": 87,
+    "name": "ABAASA BLESSING",
+    "school": "SBE",
+    "phone": "256760754805",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:01:12.452Z"
+  },
+  {
+    "sn": 88,
+    "name": "AKAIJAGYE CECILIA",
+    "school": "SBE",
+    "phone": "256765780425",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:01:17.623Z"
+  },
+  {
+    "sn": 90,
+    "name": "NIWAGABA IVAN",
+    "school": "SBE",
+    "phone": "256790704167",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:01:22.763Z"
+  },
+  {
+    "sn": 93,
+    "name": "AYEBALE JOHN MOSIIMENTA",
+    "school": "SOE",
+    "phone": "256784693644",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:01:27.822Z"
+  },
+  {
+    "sn": 94,
+    "name": "MUKUNGI MICHAEL NSAMBA",
+    "school": "SOE",
+    "phone": "256767376566",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:01:32.915Z"
+  },
+  {
+    "sn": 95,
+    "name": "NAHURIRA RUTH",
+    "school": "SOE",
+    "phone": "256778429005",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:01:37.981Z"
+  },
+  {
+    "sn": 96,
+    "name": "ANTHONY MICHAEL PAULINO",
+    "school": "SOE",
+    "phone": "256768190576",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:01:43.066Z"
+  },
+  {
+    "sn": 97,
+    "name": "KAMBERE CELINA",
+    "school": "MTSIFA",
+    "phone": "256772498164",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:01:48.125Z"
+  },
+  {
+    "sn": 98,
+    "name": "OKUMU TOMMY",
+    "school": "MTSIFA",
+    "phone": "256791276671",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:01:53.281Z"
+  },
+  {
+    "sn": 99,
+    "name": "APOLOT ASHA",
+    "school": "MTSIFA",
+    "phone": "256771614759",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:01:58.363Z"
+  },
+  {
+    "sn": 105,
+    "name": "ODONGO AUSTIN",
+    "school": "SFTNB",
+    "phone": "256777438683",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:02:03.424Z"
+  },
+  {
+    "sn": 108,
+    "name": "ALESI PERRY",
+    "school": "SAS",
+    "phone": "256793663781",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:02:08.471Z"
+  },
+  {
+    "sn": 109,
+    "name": "ACAI STEVEN",
+    "school": "SAS",
+    "phone": "256766727480",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:02:13.690Z"
+  },
+  {
+    "sn": 110,
+    "name": "MUNGUNGEYO BENEDICT",
+    "school": "SAS",
+    "phone": "256762523518",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:02:18.777Z"
+  },
+  {
+    "sn": 112,
+    "name": "MUGERWA JOHN PATRICK",
+    "school": "SAS",
+    "phone": "256773441338",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:02:23.891Z"
+  },
+  {
+    "sn": 114,
+    "name": "CHERUKUT SHAMMA",
+    "school": "SFEGS",
+    "phone": "256780519135",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:02:29.009Z"
+  },
+  {
+    "sn": 115,
+    "name": "KASASA JOVAN PAUL",
+    "school": "SFEGS",
+    "phone": "256776387291",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:02:34.212Z"
+  },
+  {
+    "sn": 116,
+    "name": "LUBABENE ROZZY ROJUST",
+    "school": "SFEGS",
+    "phone": "256771890348",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:02:39.351Z"
+  },
+  {
+    "sn": 121,
+    "name": "GALABUZI MATHIAS",
+    "school": "SLLC",
+    "phone": "256774533299",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:02:44.441Z"
+  },
+  {
+    "sn": 124,
+    "name": "ANKUNDA SHEILAH",
+    "school": "SLPA",
+    "phone": "256771766507",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:02:49.624Z"
+  },
+  {
+    "sn": 125,
+    "name": "NAAVA ANITA",
+    "school": "SLPA",
+    "phone": "256760886361",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:02:54.749Z"
+  },
+  {
+    "sn": 126,
+    "name": "KALUNGI VIOLET",
+    "school": "SLPA",
+    "phone": "256760870433",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:02:59.965Z"
+  },
+  {
+    "sn": 128,
+    "name": "ATURE RUNGANO",
+    "school": "SOP",
+    "phone": "256775144861",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:03:05.090Z"
+  },
+  {
+    "sn": 129,
+    "name": "BUKENYA ELIJAH PATIENCE",
+    "school": "SOP",
+    "phone": "256762678679",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:03:10.148Z"
+  },
+  {
+    "sn": 131,
+    "name": "NAMAGEMBE CHRISTINE",
+    "school": "SOP",
+    "phone": "256778038697",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:03:15.311Z"
+  },
+  {
+    "sn": 133,
+    "name": "ATUHAIRE ANNET",
+    "school": "SOSS",
+    "phone": "256770543107",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:03:20.445Z"
+  },
+  {
+    "sn": 138,
+    "name": "BIIRA CLOPHAS MUSABE",
+    "school": "GENDER",
+    "phone": "256763996008",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:03:25.570Z"
+  },
+  {
+    "sn": 140,
+    "name": "EYOTIA RAYMOND",
+    "school": "GENDER",
+    "phone": "256767601310",
+    "carrier": "mtn",
+    "sentAt": "2026-04-10T10:03:30.792Z"
+  }
+]

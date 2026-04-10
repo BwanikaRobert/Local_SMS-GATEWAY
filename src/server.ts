@@ -1,18 +1,71 @@
 import express from "express";
 import axios from "axios";
-import { filterByCarrier, getCarrier, PHONE_NUMBERS, type Carrier } from "./contacts";
+import fs from "fs";
+import path from "path";
+import { getCarrier, STUDENTS, PHONE_NUMBERS } from "./contacts";
 
 const app = express();
 app.use(express.json());
 
-// ── Config ─────────────────────────────────────────────────────────────────
-const GATEWAY_IP = process.env.GATEWAY_IP || "192.168.100.6";
-const GATEWAY_PORT = process.env.GATEWAY_PORT || "8080";
-const GATEWAY_URL = `http://${GATEWAY_IP}:${GATEWAY_PORT}/send-sms`;
-const DELAY_MS = Number(process.env.DELAY_MS) || 1000; // 1 second between sends
-const PORT = Number(process.env.PORT) || 6000;
+const GATEWAY_IP   = process.env.GATEWAY_IP   || "192.168.0.181";
+const GATEWAY_PORT = process.env.GATEWAY_PORT  || "8080";
+const GATEWAY_URL  = `http://${GATEWAY_IP}:${GATEWAY_PORT}/send-sms`;
+const DELAY_MS     = Number(process.env.DELAY_MS) || 5000;
+const PORT         = Number(process.env.PORT)     || 6000;
 
-// ── Helper: send one SMS via the phone gateway ────────────────────────────
+// ── Campaign message ───────────────────────────────────────────────────────
+// {name} is replaced per recipient at send time.
+const CAMPAIGN_MESSAGE = `Hello {name},
+Discipline, accountability, and practicality.
+No hype. No excuses. Just results.
+*VOTE SSERUNJOGI FRANK* for Equipments Secretary - Games Union
+
+Reliable. Practical. Effective.`;
+
+// ── Test mode ──────────────────────────────────────────────────────────────
+// true  → sends only to the 15-entry test list (Frank's number, safe to blast)
+// false → sends to the real STUDENTS list
+const TEST_MODE = false;
+
+const TEST_STUDENTS: typeof STUDENTS = Array.from({ length: 2 }, (_, i) => ({
+  sn: i + 1,
+  name: "SSERUNJOGI FRANK",
+  phone: "0707901583",
+  intlPhone: "256707901583",
+  school: "SOM",
+  carrier: "airtel" as const,
+}));
+
+const ACTIVE_STUDENTS = TEST_MODE ? TEST_STUDENTS : STUDENTS;
+
+// ── Sent-log (persisted to JSON) ───────────────────────────────────────────
+interface SentRecord {
+  sn: number;
+  name: string;
+  school: string;
+  phone: string;
+  carrier: string;
+  sentAt: string;
+}
+
+const SENT_LOG_PATH = path.join(__dirname, "..", "sent.json");
+
+function loadSentLog(): SentRecord[] {
+  if (!fs.existsSync(SENT_LOG_PATH)) return [];
+  try {
+    return JSON.parse(fs.readFileSync(SENT_LOG_PATH, "utf-8")) as SentRecord[];
+  } catch {
+    return [];
+  }
+}
+
+function appendSentRecord(record: SentRecord): void {
+  const log = loadSentLog();
+  log.push(record);
+  fs.writeFileSync(SENT_LOG_PATH, JSON.stringify(log, null, 2), "utf-8");
+}
+
+// ── Helpers ────────────────────────────────────────────────────────────────
 async function sendSms(phone: string, message: string) {
   const res = await axios.post(GATEWAY_URL, { phone, message }, { timeout: 15000 });
   return res.data;
@@ -22,15 +75,25 @@ function sleep(ms: number) {
   return new Promise((r) => setTimeout(r, ms));
 }
 
+function personalise(template: string, name: string): string {
+  return template.replace(/\{name\}/gi, name);
+}
+
 // ── GET /status ────────────────────────────────────────────────────────────
 app.get("/status", (_req, res) => {
-  const mtn = PHONE_NUMBERS.filter((n) => getCarrier(n) === "mtn");
-  const airtel = PHONE_NUMBERS.filter((n) => getCarrier(n) === "airtel");
+  const mtn     = PHONE_NUMBERS.filter((n) => getCarrier(n) === "mtn").length;
+  const airtel  = PHONE_NUMBERS.filter((n) => getCarrier(n) === "airtel").length;
+  const noPhone = STUDENTS.filter((s) => s.intlPhone === null).length;
+  const sentLog = loadSentLog();
   res.json({
+    mode: TEST_MODE ? "TEST" : "LIVE",
     gateway: GATEWAY_URL,
     totalContacts: PHONE_NUMBERS.length,
-    mtn: mtn.length,
-    airtel: airtel.length,
+    mtn,
+    airtel,
+    noPhone,
+    alreadySent: sentLog.length,
+    remaining: PHONE_NUMBERS.length - sentLog.length,
   });
 });
 
@@ -41,102 +104,125 @@ app.get("/contacts", (req, res) => {
     res.status(400).json({ error: "carrier must be mtn, airtel, or all" });
     return;
   }
-  const numbers = filterByCarrier(carrier as Carrier | "all");
-  res.json({ carrier, count: numbers.length, numbers });
+
+  const sentPhones = new Set(loadSentLog().map((r) => r.phone));
+
+  const list = ACTIVE_STUDENTS
+    .filter((s) => s.intlPhone !== null)
+    .filter((s) => carrier === "all" || s.carrier === carrier)
+    .map((s) => ({
+      sn: s.sn,
+      name: s.name,
+      school: s.school,
+      carrier: s.carrier,
+      phone: s.intlPhone,
+      sent: sentPhones.has(s.intlPhone!),
+    }));
+
+  res.json({ mode: TEST_MODE ? "TEST" : "LIVE", carrier, count: list.length, contacts: list });
+});
+
+// ── GET /sent ──────────────────────────────────────────────────────────────
+app.get("/sent", (_req, res) => {
+  const log = loadSentLog();
+  res.json({ total: log.length, records: log });
 });
 
 // ── POST /send ─────────────────────────────────────────────────────────────
-// Body: { message: string, carrier: "mtn" | "airtel" | "all" }
-// Sends the message to all contacts of the selected carrier, 1 per second.
+// Body: { carrier: "mtn" | "airtel" | "all" }
+// Skips contacts already in sent.json. Writes each success to disk immediately.
 app.post("/send", async (req, res) => {
-  const { message, carrier = "all" } = req.body as {
-    message?: string;
-    carrier?: string;
-  };
+  const { carrier = "all" } = req.body as { carrier?: string };
 
-  if (!message || !message.trim()) {
-    res.status(400).json({ error: "message is required" });
-    return;
-  }
   if (!["mtn", "airtel", "all"].includes(carrier)) {
     res.status(400).json({ error: "carrier must be mtn, airtel, or all" });
     return;
   }
 
-  const numbers = filterByCarrier(carrier as Carrier | "all");
-  if (numbers.length === 0) {
-    res.status(404).json({ error: "No contacts found for this carrier" });
+  const sentPhones = new Set(loadSentLog().map((r) => r.phone));
+
+  const targets = ACTIVE_STUDENTS.filter(
+    (s) =>
+      s.intlPhone !== null &&
+      (carrier === "all" || s.carrier === carrier) &&
+      !sentPhones.has(s.intlPhone!)
+  ) as (typeof STUDENTS[number] & { intlPhone: string })[];
+
+  const skipped = ACTIVE_STUDENTS.filter(
+    (s) => s.intlPhone !== null && sentPhones.has(s.intlPhone!)
+  ).length;
+
+  if (targets.length === 0) {
+    res.json({ message: "Nothing to send — all contacts already received this message.", skipped });
     return;
   }
 
-  console.log(`\n📤 Sending "${message}" to ${numbers.length} ${carrier} contacts...\n`);
+  console.log(`\n[${TEST_MODE ? "TEST" : "LIVE"}] Sending to ${targets.length} ${carrier} contacts (${skipped} skipped)...\n`);
 
-  const results: { phone: string; status: "sent" | "failed"; error?: string }[] = [];
-let newMsg=`Greetings. 
+  const results: {
+    sn: number; name: string; school: string; phone: string;
+    status: "sent" | "failed"; error?: string;
+  }[] = [];
 
-You are warmly invited to the wedding preparatory meetings for Mr. and Mrs. Ndawula Francis Bob.
-
-Meetings take place every Sunday at 4:00 PM at their residence in Bunamwaya Ngobe. 
-We look forward to your presence and support as we prepare for the wedding on 18th April.
-
-If you are unable to attend, please send your inquiries to:
-Ndawula Francis Bob:0702716544.
-Nalubanyi Caroline:0700547445
-
-
-Nkulamusiza ssebo oba nyabo. 
-Tukwaniriza mu nkungaana z'embaga y'omwami n'omukyala Ndawula Francis Bob enaabaawo nga 18th April.
-Enkugaana zibeera wo bbuli lwa ssabbiiti(SANDE) ku ssawa kkumi eza kuwungezi(4:00PM) mu mmaka gaabwe e Bunamwaya Ngobe.
-
-Okwebuuzako tuukirira:
-Ndawula Francis Bob:0702716544.
-Nalubanyi Caroline:0700547445`
-  for (let i = 0; i < numbers.length; i++) {
-    const phone = numbers[i];
+  for (let i = 0; i < targets.length; i++) {
+    const student = targets[i];
+    const text = personalise(CAMPAIGN_MESSAGE, student.name);
     try {
-      await sendSms(phone, newMsg.trim());
-      results.push({ phone, status: "sent" });
-      console.log(`  ✅ [${i + 1}/${numbers.length}] ${phone} — sent`);
+      await sendSms(student.intlPhone, text);
+      appendSentRecord({
+        sn: student.sn,
+        name: student.name,
+        school: student.school,
+        phone: student.intlPhone,
+        carrier: student.carrier,
+        sentAt: new Date().toISOString(),
+      });
+      results.push({ sn: student.sn, name: student.name, school: student.school, phone: student.intlPhone, status: "sent" });
+      console.log(`  ✅ [${i + 1}/${targets.length}] ${student.name} — ${student.intlPhone}`);
     } catch (err) {
       const errMsg = axios.isAxiosError(err)
         ? err.response?.data?.message || err.message
         : String(err);
-      results.push({ phone, status: "failed", error: errMsg });
-      console.log(`  ❌ [${i + 1}/${numbers.length}] ${phone} — failed: ${errMsg}`);
+      results.push({ sn: student.sn, name: student.name, school: student.school, phone: student.intlPhone, status: "failed", error: errMsg });
+      console.log(`  ❌ [${i + 1}/${targets.length}] ${student.name} — FAILED: ${errMsg}`);
     }
 
-    // Wait between sends (skip after last)
-    if (i < numbers.length - 1) await sleep(DELAY_MS);
+    if (i < targets.length - 1) await sleep(DELAY_MS);
   }
 
-  const sent = results.filter((r) => r.status === "sent").length;
+  const sent   = results.filter((r) => r.status === "sent").length;
   const failed = results.filter((r) => r.status === "failed").length;
+  console.log(`\nDone: ${sent} sent, ${failed} failed, ${skipped} skipped\n`);
 
-  console.log(`\n✅ Done: ${sent} sent, ${failed} failed\n`);
-
-  res.json({
-    carrier,
-    total: numbers.length,
-    sent,
-    failed,
-    results,
-  });
+  res.json({ mode: TEST_MODE ? "TEST" : "LIVE", carrier, total: targets.length, sent, failed, skipped, results });
 });
 
 // ── POST /send-one ─────────────────────────────────────────────────────────
-// Body: { phone: string, message: string }
-// Send a single SMS to a specific number.
+// Body: { phone: string }
 app.post("/send-one", async (req, res) => {
-  const { phone, message } = req.body as { phone?: string; message?: string };
+  const { phone } = req.body as { phone?: string };
 
-  if (!phone || !message) {
-    res.status(400).json({ error: "phone and message are required" });
+  if (!phone) {
+    res.status(400).json({ error: "phone is required" });
     return;
   }
 
+  const student = ACTIVE_STUDENTS.find((s) => s.intlPhone === phone || s.phone === phone);
+  const text = personalise(CAMPAIGN_MESSAGE, student ? student.name : "");
+
   try {
-    const data = await sendSms(phone, message.trim());
-    console.log(`✅ Sent to ${phone}`);
+    const data = await sendSms(phone, text);
+    if (student) {
+      appendSentRecord({
+        sn: student.sn,
+        name: student.name,
+        school: student.school,
+        phone,
+        carrier: student.carrier,
+        sentAt: new Date().toISOString(),
+      });
+    }
+    console.log(`✅ Sent to ${phone}${student ? ` — ${student.name}` : ""}`);
     res.json({ phone, status: "sent", gatewayResponse: data });
   } catch (err) {
     const errMsg = axios.isAxiosError(err)
@@ -149,16 +235,20 @@ app.post("/send-one", async (req, res) => {
 
 // ── Start ──────────────────────────────────────────────────────────────────
 app.listen(PORT, () => {
+  const sentCount = loadSentLog().length;
   console.log(`
-🚀 SMS Gateway Server running on http://localhost:${PORT}
+SMS Gateway Server  [${TEST_MODE ? "TEST MODE — 15 test entries" : "LIVE MODE — real contacts"}]
+http://localhost:${PORT}
 
 Endpoints:
-  GET  /status              — gateway info & contact counts
-  GET  /contacts?carrier=   — list contacts (mtn | airtel | all)
-  POST /send                — bulk send { message, carrier: "mtn"|"airtel"|"all" }
-  POST /send-one            — single send { phone, message }
+  GET  /status              — gateway info, contact counts & send progress
+  GET  /contacts?carrier=   — list contacts with sent status (mtn | airtel | all)
+  GET  /sent                — full log of successfully sent messages
+  POST /send                — bulk send { carrier: "mtn"|"airtel"|"all" }
+  POST /send-one            — single send { phone }
 
-Gateway: ${GATEWAY_URL}
-Delay:   ${DELAY_MS}ms between messages
+Sent log: ${SENT_LOG_PATH}  (${sentCount} sent so far)
+Gateway:  ${GATEWAY_URL}
+Delay:    ${DELAY_MS}ms between messages
   `);
 });
