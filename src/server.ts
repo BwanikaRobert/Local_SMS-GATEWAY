@@ -7,7 +7,7 @@ import { getCarrier, STUDENTS, PHONE_NUMBERS } from "./contacts";
 const app = express();
 app.use(express.json());
 
-const GATEWAY_IP   = process.env.GATEWAY_IP   || "192.168.0.181";
+const GATEWAY_IP   = process.env.GATEWAY_IP   || "192.168.100.53";
 const GATEWAY_PORT = process.env.GATEWAY_PORT  || "8080";
 const GATEWAY_URL  = `http://${GATEWAY_IP}:${GATEWAY_PORT}/send-sms`;
 const DELAY_MS     = Number(process.env.DELAY_MS) || 5000;
@@ -15,12 +15,7 @@ const PORT         = Number(process.env.PORT)     || 6000;
 
 // ── Campaign message ───────────────────────────────────────────────────────
 // {name} is replaced per recipient at send time.
-const CAMPAIGN_MESSAGE = `Hello {name},
-Discipline, accountability, and practicality.
-No hype. No excuses. Just results.
-*VOTE SSERUNJOGI FRANK* for Equipments Secretary - Games Union
-
-Reliable. Practical. Effective.`;
+const CAMPAIGN_MESSAGE = "TIMER,5,3600#";
 
 // ── Test mode ──────────────────────────────────────────────────────────────
 // true  → sends only to the 15-entry test list (Frank's number, safe to blast)
@@ -30,8 +25,8 @@ const TEST_MODE = false;
 const TEST_STUDENTS: typeof STUDENTS = Array.from({ length: 2 }, (_, i) => ({
   sn: i + 1,
   name: "SSERUNJOGI FRANK",
-  phone: "0707901583",
-  intlPhone: "256707901583",
+  phone: "0757082687",
+  intlPhone: "256757082687",
   school: "SOM",
   carrier: "airtel" as const,
 }));
